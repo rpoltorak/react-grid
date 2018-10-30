@@ -101,7 +101,7 @@ export default class Grid extends Component {
           </div>
         </div>
         <div className="grid__side">
-          <button onClick={this.exportToCSV}>Export to CSV</button>
+          <button type="button" onClick={this.exportToCSV}>Export to CSV</button>
         </div>
       </div>
     );

@@ -4,13 +4,20 @@ import PropTypes from "prop-types";
 import "./GridCell.css";
 
 export default class GridCell extends Component {
+  static defaultProps = {
+    x: undefined,
+    children: undefined,
+  }
+
   state = {
     isEdited: false,
   }
 
   input = React.createRef()
 
-  shouldComponentUpdate = (nextProps, nextState) => this.props.value !== nextProps.value || this.state.isEdited !== nextState.isEdited;
+  shouldComponentUpdate = (nextProps, nextState) => (
+    this.props.value !== nextProps.value || this.state.isEdited !== nextState.isEdited
+  )
 
   toggleEdit = () => this.setState(state => ({ isEdited: !state.isEdited }))
 
@@ -52,8 +59,9 @@ export default class GridCell extends Component {
 }
 
 GridCell.propTypes = {
-  value: PropTypes.any.isRequired,
+  value: PropTypes.string.isRequired,
   x: PropTypes.number,
   y: PropTypes.number.isRequired,
   onCellChange: PropTypes.func.isRequired,
+  children: PropTypes.element,
 };

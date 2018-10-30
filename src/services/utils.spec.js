@@ -23,7 +23,7 @@ describe("Utils Service", () => {
         new Error("Error: Specified array is empty"),
       );
     } catch (e) {
-
+      // eslint-disable-line
     }
   });
 

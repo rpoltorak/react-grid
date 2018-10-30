@@ -9,9 +9,9 @@ import GridCell from "../GridCell/GridCell";
 const exampleData = {
   headers: ["Firstname", "Lastname", "Age"],
   data: [
-    ["John", "Doe", 24],
-    ["Jan", "Kowalski", 32],
-    ["Jose", "Gonzalez", 37],
+    ["John", "Doe", "24"],
+    ["Jan", "Kowalski", "32"],
+    ["Jose", "Gonzalez", "37"],
   ],
 };
 
@@ -52,9 +52,9 @@ describe("Grid Component", () => {
     expect(spy).toHaveBeenCalled();
     expect(grid.state().data.length).toBe(expectedRows);
     expect(grid.state().data).toEqual([
-      ["John", "Doe", 24],
-      ["Jan", "Kowalski", 32],
-      ["Jose", "Gonzalez", 37],
+      ["John", "Doe", "24"],
+      ["Jan", "Kowalski", "32"],
+      ["Jose", "Gonzalez", "37"],
       ["", "", ""],
     ]);
     expect(grid.state().headers.length).toBe(exampleData.headers.length);
@@ -77,8 +77,8 @@ describe("Grid Component", () => {
     expect(spy).toHaveBeenCalled();
     expect(grid.state().data.length).toBe(expectedRows);
     expect(grid.state().data).toEqual([
-      ["Jan", "Kowalski", 32],
-      ["Jose", "Gonzalez", 37],
+      ["Jan", "Kowalski", "32"],
+      ["Jose", "Gonzalez", "37"],
     ]);
     expect(grid.state().headers.length).toBe(exampleData.headers.length);
     expect(grid.find(GridRow).length).toBe(expectedRows);
@@ -104,9 +104,9 @@ describe("Grid Component", () => {
     expect(grid.state().headers.length).toBe(expectedColumns);
     expect(grid.state().headers).toEqual(["Firstname", "Lastname", "Age", ""]);
     expect(grid.state().data).toEqual([
-      ["John", "Doe", 24, ""],
-      ["Jan", "Kowalski", 32, ""],
-      ["Jose", "Gonzalez", 37, ""],
+      ["John", "Doe", "24", ""],
+      ["Jan", "Kowalski", "32", ""],
+      ["Jose", "Gonzalez", "37", ""],
     ]);
     expect(grid.find(GridCell).length).toBe(expectedColumns * expectedRows);
   });
@@ -129,9 +129,9 @@ describe("Grid Component", () => {
     expect(grid.state().headers.length).toBe(expectedColumns);
     expect(grid.state().headers).toEqual(["Lastname", "Age"]);
     expect(grid.state().data).toEqual([
-      ["Doe", 24],
-      ["Kowalski", 32],
-      ["Gonzalez", 37],
+      ["Doe", "24"],
+      ["Kowalski", "32"],
+      ["Gonzalez", "37"],
     ]);
     expect(grid.find(GridCell).length).toBe(expectedColumns * (exampleData.data.length + 1));
   });

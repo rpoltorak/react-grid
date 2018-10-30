@@ -8,9 +8,9 @@ import "./App.css";
 const headers = ["Firstname", "Lastname", "Age"];
 
 const data = [
-  ["John", "Doe", 24],
-  ["Jan", "Kowalski", 32],
-  ["Jose", "Gonzalez", 37],
+  ["John", "Doe", "24"],
+  ["Jan", "Kowalski", "32"],
+  ["Jose", "Gonzalez", "37"],
 ];
 
 const App = () => (

@@ -24,7 +24,7 @@ const GridRow = ({
 
 GridRow.propTypes = {
   index: PropTypes.number.isRequired,
-  row: PropTypes.array.isRequired,
+  row: PropTypes.arrayOf(PropTypes.string).isRequired,
   onRowDelete: PropTypes.func.isRequired,
   onCellChange: PropTypes.func.isRequired,
 };
