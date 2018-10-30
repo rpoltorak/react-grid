@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 import GridHeader from "./GridHeader";
 import GridRow from "./GridRow";
+import { generateCSV, removeByIndex, updateByIndex } from "../utils";
 
 import "./Grid.css";
-import { generateCSV, removeByIndex, updateByIndex } from "../utils";
 
 export default class Grid extends Component {
   static defaultProps = {
@@ -91,7 +91,12 @@ export default class Grid extends Component {
             />
           )}
           <div className="grid__row">
-            <div className="grid__cell grid__cell--small grid__cell--add" onClick={this.handleRowInsert}>&#43;</div>
+            <div
+              id="add-row"
+              className="grid__cell grid__cell--small grid__cell--add"
+              onClick={this.handleRowInsert}>
+                &#43;
+            </div>
           </div>
         </div>
         <div className="grid__side">

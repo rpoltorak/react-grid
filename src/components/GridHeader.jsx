@@ -13,10 +13,15 @@ const GridHeader = ({headers, onHeaderChange, onColumnDelete, onColumnInsert}) =
         onCellChange={onHeaderChange}
         y={headerIndex}
       >
-        <span className="removal" onClick={onColumnDelete(headerIndex)}>&times;</span>
+        <span id="remove-column" className="removal" onClick={onColumnDelete(headerIndex)}>&times;</span>
       </GridCell>
     ))}
-    <div className="grid__cell grid__cell--small grid__cell--add" onClick={onColumnInsert}>&#43;</div>
+    <div
+      id="add-column"
+      className="grid__cell grid__cell--small grid__cell--add"
+      onClick={onColumnInsert}>
+        &#43;
+    </div>
   </div>
 );
 

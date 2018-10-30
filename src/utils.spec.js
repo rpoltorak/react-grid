@@ -1,6 +1,6 @@
 import { removeByIndex, updateByIndex, generateCSV } from './utils';
 
-describe("utils", () => {
+describe("Utils Service", () => {
   test("removeByIndex: removes specified element from an array", () => {
     const data = ["x", "y", "z"];
 
