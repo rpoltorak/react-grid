@@ -14,7 +14,7 @@ describe("GridHeader Component", () => {
         onHeaderChange={() => {}}
         onColumnDelete={() => {}}
         onColumnInsert={() => {}}
-      />
+      />,
     );
 
     expect(header.find(GridCell).length).toBe(exampleHeaders.length);
@@ -28,12 +28,12 @@ describe("GridHeader Component", () => {
         onHeaderChange={() => {}}
         onColumnDelete={() => {}}
         onColumnInsert={() => {}}
-      />
+      />,
     );
 
     const newHeaders = [...exampleHeaders, "Salary"];
 
-    header.setProps({headers: newHeaders});
+    header.setProps({ headers: newHeaders });
 
     expect(header.find(GridCell).length).toBe(newHeaders.length);
   });

@@ -12,13 +12,13 @@ const exampleData = {
     ["John", "Doe", 24],
     ["Jan", "Kowalski", 32],
     ["Jose", "Gonzalez", 37],
-  ]
+  ],
 };
 
 describe("Grid Component", () => {
   test("should render correctly when passed props", () => {
     const grid = shallow(
-      <Grid headers={exampleData.headers} data={exampleData.data} />
+      <Grid headers={exampleData.headers} data={exampleData.data} />,
     );
 
     expect(grid.find(GridHeader).exists()).toBe(true);
@@ -28,7 +28,7 @@ describe("Grid Component", () => {
 
   test("should render correctly with default props", () => {
     const grid = shallow(
-      <Grid />
+      <Grid />,
     );
 
     expect(grid.find(GridHeader).exists()).toBe(true);
@@ -38,7 +38,7 @@ describe("Grid Component", () => {
 
   test("should add new row after click on the plus button", () => {
     const grid = mount(
-      <Grid headers={exampleData.headers} data={exampleData.data} />
+      <Grid headers={exampleData.headers} data={exampleData.data} />,
     );
 
     const expectedRows = exampleData.data.length + 1;
@@ -55,7 +55,7 @@ describe("Grid Component", () => {
       ["John", "Doe", 24],
       ["Jan", "Kowalski", 32],
       ["Jose", "Gonzalez", 37],
-      ["", "", ""]
+      ["", "", ""],
     ]);
     expect(grid.state().headers.length).toBe(exampleData.headers.length);
     expect(grid.find(GridRow).length).toBe(expectedRows);
@@ -63,7 +63,7 @@ describe("Grid Component", () => {
 
   test("should remove a row after click on the delete button", () => {
     const grid = mount(
-      <Grid headers={exampleData.headers} data={exampleData.data} />
+      <Grid headers={exampleData.headers} data={exampleData.data} />,
     );
 
     const spy = jest.spyOn(grid.instance(), "handleRowDelete");
@@ -86,7 +86,7 @@ describe("Grid Component", () => {
 
   test("should add new column after click on the plus button", () => {
     const grid = mount(
-      <Grid headers={exampleData.headers} data={exampleData.data} />
+      <Grid headers={exampleData.headers} data={exampleData.data} />,
     );
 
     const spy = jest.spyOn(grid.instance(), "handleColumnInsert");
@@ -113,7 +113,7 @@ describe("Grid Component", () => {
 
   test("should remove existing column after click on the delete button", () => {
     const grid = mount(
-      <Grid headers={exampleData.headers} data={exampleData.data} />
+      <Grid headers={exampleData.headers} data={exampleData.data} />,
     );
 
     const spy = jest.spyOn(grid.instance(), "handleColumnDelete");
@@ -135,5 +135,4 @@ describe("Grid Component", () => {
     ]);
     expect(grid.find(GridCell).length).toBe(expectedColumns * (exampleData.data.length + 1));
   });
-
 });

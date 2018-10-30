@@ -1,4 +1,4 @@
-import { removeByIndex, updateByIndex, generateCSV } from './utils';
+import { removeByIndex, updateByIndex, generateCSV } from "./utils";
 
 describe("Utils Service", () => {
   test("removeByIndex: removes specified element from an array", () => {
@@ -16,16 +16,16 @@ describe("Utils Service", () => {
 
     try {
       expect(updateByIndex(data, 4, "v")).toThrow(
-        new Error(`Error: Expected index from 0 to 3 range`)
+        new Error("Error: Expected index from 0 to 3 range"),
       );
 
       expect(updateByIndex([], 2, "v")).toThrow(
-        new Error(`Error: Specified array is empty`)
+        new Error("Error: Specified array is empty"),
       );
-    } catch(e) {
+    } catch (e) {
 
     }
-  })
+  });
 
   test("generateCSV: generates correct csv format", () => {
     const headers = ["firstname", "lastname", "age"];
@@ -41,6 +41,6 @@ describe("Utils Service", () => {
       + "John%2CDoe%2C32%0A"
       + "Jose%2CGonzalez%2C37";
 
-    expect(generateCSV(headers, data)).toEqual(expectedResult)
+    expect(generateCSV(headers, data)).toEqual(expectedResult);
   });
 });

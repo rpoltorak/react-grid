@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 
 export default class GridCell extends Component {
   state = {
-    isEdited: false
+    isEdited: false,
   }
 
   input = React.createRef()
 
-  shouldComponentUpdate = (nextProps, nextState) =>
-    this.props.value !== nextProps.value || this.state.isEdited !== nextState.isEdited;
+  shouldComponentUpdate = (nextProps, nextState) => this.props.value !== nextProps.value || this.state.isEdited !== nextState.isEdited;
 
   toggleEdit = () => this.setState(state => ({ isEdited: !state.isEdited }))
 
@@ -28,7 +27,8 @@ export default class GridCell extends Component {
 
   render() {
     return this.state.isEdited
-      ? <div className="grid__cell">
+      ? (
+        <div className="grid__cell">
           <input
             className="grid__cell__field"
             type="text"
@@ -39,10 +39,13 @@ export default class GridCell extends Component {
             autoFocus={this.state.isEdited}
           />
         </div>
-      : <div className="grid__cell" onClick={this.toggleEdit}>
+      )
+      : (
+        <div className="grid__cell" onClick={this.toggleEdit}>
           {this.props.value}
           {this.props.children}
         </div>
+      );
   }
 }
 
@@ -50,5 +53,5 @@ GridCell.propTypes = {
   value: PropTypes.any.isRequired,
   x: PropTypes.number,
   y: PropTypes.number.isRequired,
-  onCellChange: PropTypes.func.isRequired
+  onCellChange: PropTypes.func.isRequired,
 };

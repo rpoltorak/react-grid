@@ -15,7 +15,7 @@ describe("GridCell Component", () => {
         onCellChange={() => {}}
         x={position.x}
         y={position.y}
-      />
+      />,
     );
 
     expect(cell.find(".grid__cell").text()).toEqual(value);
@@ -34,7 +34,7 @@ describe("GridCell Component", () => {
         y={position.y}
       >
         <div className="unique" />
-      </GridCell>
+      </GridCell>,
     );
 
     expect(cell.contains(<div className="unique" />)).toEqual(true);
@@ -51,7 +51,7 @@ describe("GridCell Component", () => {
         onCellChange={() => {}}
         x={position.x}
         y={position.y}
-      />
+      />,
     );
 
     cell.find(".grid__cell").simulate("click");
@@ -71,7 +71,7 @@ describe("GridCell Component", () => {
         onCellChange={() => {}}
         x={position.x}
         y={position.y}
-      />
+      />,
     );
 
     cell.find(".grid__cell").simulate("click");
