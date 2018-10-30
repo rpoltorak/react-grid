@@ -16,22 +16,19 @@
 .grid__cell--small {
   min-width: 15px;
   text-align: center;
+  font-weight: normal;
 }
 
 .grid__cell--add {
-  background-color: #8ABD5F;
-  color: white;
   border: none;
 }
 
 .grid__cell--remove {
-  background-color: #D46A6A;
-  color: white;
+  color: #ff0000;
+  border: none;
 }
 
-
 .grid__cell--empty {
-  background-color: white;
   border: none;
   cursor: default;
 }

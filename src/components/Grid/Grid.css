@@ -3,6 +3,8 @@
   display: table;
   border-collapse: separate;
   border-spacing: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.3), 0 0 2px 0 rgba(0,0,0,.3)
 }
 
 .grid__side {
@@ -12,4 +14,6 @@
 #remove-column {
   position: absolute;
   right: 5px;
+  color: #ff0000;
+  font-weight: normal;
 }
