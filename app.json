@@ -1,0 +1,6 @@
+{
+  "name": "React Grid",
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ]
+}
