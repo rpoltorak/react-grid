@@ -1,5 +1,13 @@
 # React Grid
 
+## Description
+Table component satisfying the following requirements:
+
+- possibility to add and remove rows
+- possibility to add and remove columns
+- possibility to edit cells content in place
+- possibility to export data to a CSV file
+
 ## Installation
 
 ```
