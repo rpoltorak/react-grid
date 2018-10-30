@@ -1,0 +1,37 @@
+.grid__cell {
+  position: relative;
+  display: table-cell;
+  min-width: 100px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+}
+
+.grid__cell__field {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.grid__cell--small {
+  min-width: 15px;
+  text-align: center;
+}
+
+.grid__cell--add {
+  background-color: #8ABD5F;
+  color: white;
+  border: none;
+}
+
+.grid__cell--remove {
+  background-color: #D46A6A;
+  color: white;
+}
+
+
+.grid__cell--empty {
+  background-color: white;
+  border: none;
+  cursor: default;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import "./GridCell.css";
+
 export default class GridCell extends Component {
   state = {
     isEdited: false,

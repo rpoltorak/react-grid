@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import GridHeader from "./GridHeader";
-import GridCell from "./GridCell";
+import GridCell from "../GridCell/GridCell";
 
 const exampleHeaders = ["Firstname", "Lastname", "Age"];
 

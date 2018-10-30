@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import GridCell from "./GridCell";
+import GridCell from "../GridCell/GridCell";
+
+import "./GridHeader.css";
 
 const GridHeader = ({
   headers, onHeaderChange, onColumnDelete, onColumnInsert,
@@ -15,7 +17,7 @@ const GridHeader = ({
         onCellChange={onHeaderChange}
         y={headerIndex}
       >
-        <span id="remove-column" className="removal" onClick={onColumnDelete(headerIndex)}>&times;</span>
+        <span id="remove-column" onClick={onColumnDelete(headerIndex)}>&times;</span>
       </GridCell>
     ))}
     <div

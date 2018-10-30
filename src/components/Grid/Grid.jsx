@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import GridHeader from "./GridHeader";
-import GridRow from "./GridRow";
-import { generateCSV, removeByIndex, updateByIndex } from "../utils";
+import GridHeader from "../GridHeader/GridHeader";
+import GridRow from "../GridRow/GridRow";
+import { generateCSV, removeByIndex, updateByIndex } from "../../services/utils";
 
 import "./Grid.css";
 

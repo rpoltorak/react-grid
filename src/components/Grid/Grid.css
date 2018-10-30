@@ -1,0 +1,15 @@
+.grid__container {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.grid__side {
+  margin-top: 10px;
+}
+
+#remove-column {
+  position: absolute;
+  right: 5px;
+}

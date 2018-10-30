@@ -1,7 +1,9 @@
 import { hot } from "react-hot-loader";
 import React from "react";
 
-import Grid from "./Grid";
+import Grid from "../Grid/Grid";
+
+import "./App.css";
 
 const headers = ["Firstname", "Lastname", "Age"];
 

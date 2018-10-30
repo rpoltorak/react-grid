@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import GridCell from "./GridCell";
+import GridCell from "../GridCell/GridCell";
+
+import "./GridRow.css";
 
 const GridRow = ({
   index, row, onRowDelete, onCellChange,

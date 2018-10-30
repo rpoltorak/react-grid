@@ -2,9 +2,9 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 
 import Grid from "./Grid";
-import GridHeader from "./GridHeader";
-import GridRow from "./GridRow";
-import GridCell from "./GridCell";
+import GridHeader from "../GridHeader/GridHeader";
+import GridRow from "../GridRow/GridRow";
+import GridCell from "../GridCell/GridCell";
 
 const exampleData = {
   headers: ["Firstname", "Lastname", "Age"],
