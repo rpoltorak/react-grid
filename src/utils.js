@@ -1,5 +1,5 @@
 export function generateCSV(headers, data) {
-  const csvData = headers.join(',') + "\n" + data.map(row => row.join(',')).join('\n');
+  const csvData = headers.join(",") + "\n" + data.map(row => row.join(",")).join("\n");
 
   return `data:text/csv;charset=UTF-8,${encodeURIComponent(csvData)}`;
 }
